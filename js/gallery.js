@@ -70,9 +70,10 @@ const images = [
       `<li class="gallery-item"><a class="gallery-link" href="${el.original}"><img class="gallery-image" src="${el.preview}" data-source="${el.original}" alt="${el.description}" width ="360" height ="200"></a></li>`
   )
   .join("");
-  gallery.innerHTML = galleryElements;
+  gallery.insertAdjacentHTML("beforeend", galleryElements);
 
   let instance = null;
+
   
   gallery.addEventListener("click", (event)=>{
 event.preventDefault();
